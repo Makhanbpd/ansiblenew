@@ -1,0 +1,14 @@
+--- # my loop file
+- hosts: mydemo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+         - name: add list of users on my nodes
+           user: name='{{item}}' state=absent
+           with_items:
+                      - raj
+                      - babu
+                      - raju
+                      - naj
+                      - samaj  

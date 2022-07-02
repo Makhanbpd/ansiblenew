@@ -1,0 +1,10 @@
+--- # this is my variable file
+- hosts: mydemo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars: 
+       pkgname: tree
+  tasks:
+          - name: want to install apache
+            action: yum name='{{pkgname}}' state=absent    

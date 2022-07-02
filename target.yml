@@ -1,0 +1,5 @@
+--- # this is my first YAML file
+- hosts: mydemo
+  user: ansible
+  become: yes
+  connection: ssh  

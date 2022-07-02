@@ -1,0 +1,8 @@
+--- # this is my firt TASK file
+- hosts: mydemo
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks: 
+         - name: install httpd
+           action: yum name=httpd state=absent  
